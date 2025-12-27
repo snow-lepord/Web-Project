@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #001f4d;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav {
+  background-color: #003366;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+nav .logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  margin-left: 30px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  color: #66b2ff;
+}
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+header p {
+  font-size: 1.1rem;
+  color: #cddcfc;
+}
+section {
+  display: none;
+}
+section.active {
+  display: block;
+}
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  background-color: white;
+  color: #001f4d;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+th, td {
+  padding: 15px 20px;
+  text-align: left;
+}
+th {
+  background-color: #002966;
+  color: white;
+}
+tr {
+  background-color: #e6f0ff;
+}
+tr:hover {
+  background-color: #cce0ff;
+}
+.btn-primary {
+  background-color: #004aad;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #003a87;
+}
+.profile-card, .profile-list {
+  background-color: #00244d;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+.profile-card h2, .profile-list h2 {
+  margin-bottom: 10px;
+}
+.profile-card p {
+  color: #a3bbea;
+  margin-bottom: 10px;
+}
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #66b2ff;
+  margin-bottom: 18px;
+  object-fit: cover;
+}
+form label {
+  display: block;
+  margin: 10px 0 5px 0;
+  color: #cddcfc;
+}
+input[type="text"], input[type="email"], input[type="date"], input[type="tel"], input[type="number"], select {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+footer {
+  margin-top: 50px;
+  padding: 20px 0;
+  background-color: #002244;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #98a9c6;
+}
+ul.resources {
+  list-style: none;
+  padding-left: 0;
+}
+ul.resources li a {
+  color: #66b2ff;
+  text-decoration: none;
+}
+ul.resources li a:hover {
+  text-decoration: underline;
+}

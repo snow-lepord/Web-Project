@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CertiTrack - Skill Certification Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="logo">CertiTrack</div>
+  <ul>
+    <li><a class="nav-link active" data-target="home">Home</a></li>
+    <li><a class="nav-link" data-target="track">Track Certifications</a></li>
+    <li><a class="nav-link" data-target="reference">Reference</a></li>
+    <li><a class="nav-link" data-target="profile">Profile</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <!-- Home Section -->
+  <section id="home" class="active">
+    <header>
+      <h1>Professional Skill Certification Tracker</h1>
+      <p>Keep your professional skills up to date, manage certifications easily.</p>
+    </header>
+    <div class="dashboard-grid">
+      <section class="certification-section">
+        <h2>Your Certifications</h2>
+        <table>
+          <thead>
+            <tr><th>Skill</th><th>Status</th><th>Expiry Date</th><th>Details</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>HTML5</td><td>Active</td><td>2025-12-31</td><td><a class="btn-primary" href="#" onclick="switchSection('reference')">View</a></td></tr>
+            <tr><td>JavaScript ES6</td><td>Expired</td><td>2024-08-15</td><td><a class="btn-primary" href="#" onclick="switchSection('reference')">Renew</a></td></tr>
+            <tr><td>CSS3</td><td>Active</td><td>2026-07-23</td><td><a class="btn-primary" href="#" onclick="switchSection('reference')">View</a></td></tr>
+          </tbody>
+        </table>
+      </section>
+      <aside class="profile-card" id="currentProfileCard">
+        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998671.png" alt="User Profile Picture" class="profile-img" />
+        <div id="profileInfo">
+          <h2>Welcome! Create Your Profile</h2>
+          <p></p>
+          <p></p>
+        </div>
+        <form id="homeProfileForm" style="margin-top:20px;">
+          <label for="nameHome">Name:</label>
+          <input type="text" id="nameHome" required />
+          <label for="dobHome">Date of Birth:</label>
+          <input type="date" id="dobHome" required />
+          <label for="phoneHome">Phone Number:</label>
+          <input type="tel" id="phoneHome" pattern="[0-9]{10}" required />
+          <label for="streamHome">Stream:</label>
+          <input type="text" id="streamHome" />
+          <label for="marks10thHome">10th Marks (%):</label>
+          <input type="number" id="marks10thHome" min="0" max="100" step="0.01" required />
+          <label for="marks12thHome">12th Marks (%):</label>
+          <input type="number" id="marks12thHome" min="0" max="100" step="0.01" required />
+          <button type="submit" class="btn-primary" style="margin-top: 15px;">Create Profile</button>
+        </form>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Track Certifications -->
+  <section id="track">
+    <header>
+      <h1>Track Your Certifications</h1>
+      <p>Add, update, or delete your professional certifications in the system.</p>
+    </header>
+    <form id="certForm">
+      <label for="skill">Skill Name:</label>
+      <input type="text" id="skill" required />
+      <label for="status">Status:</label>
+      <select id="status" required>
+        <option value="" disabled selected>Select status</option>
+        <option value="Active">Active</option>
+        <option value="Expired">Expired</option>
+        <option value="Renewing">Renewing</option>
+      </select>
+      <label for="expiry">Expiry Date:</label>
+      <input type="date" id="expiry" required />
+      <button type="submit" class="btn-primary" style="margin-top: 15px;">Add Certification</button>
+    </form>
+    <div style="margin-top: 30px;">
+      <h2>Certification List</h2>
+      <table id="certTable">
+        <thead>
+          <tr><th>Skill</th><th>Status</th><th>Expiry Date</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Reference Section -->
+  <section id="reference">
+    <header>
+      <h1>Certification References & Learning Resources</h1>
+      <p>Helpful guides and material to maintain and renew your certifications.</p>
+    </header>
+    <ul class="resources">
+      <li><a href="https://www.w3schools.com/html/" target="_blank">HTML Tutorial - W3Schools</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript Guide - MDN</a></li>
+      <li><a href="https://www.w3schools.com/css/" target="_blank">CSS Reference - W3Schools</a></li>
+      <li><a href="https://www.linkedin.com/learning/" target="_blank">Professional Learning - LinkedIn Learning</a></li>
+    </ul>
+  </section>
+
+  <!-- Profile Section -->
+  <section id="profile">
+    <header>
+      <h1>User Profiles</h1>
+      <p>You can create or edit up to 2 profiles.</p>
+    </header>
+    <div class="profile-list" style="margin-bottom: 20px;">
+      <h2>Profiles</h2>
+      <ul id="profileList" style="list-style: none; padding-left:0; color:#cddcfc;"></ul>
+    </div>
+    <section class="profile-card" style="max-width: 500px; margin: auto;">
+      <form id="profileForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required />
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" required />
+        <label for="profession">Profession:</label>
+        <input type="text" id="profession" />
+        <button type="submit" class="btn-primary" style="margin-top: 15px;">Save / Add Profile</button>
+      </form>
+    </section>
+  </section>
+</div>
+
+<footer>&copy; 2025 CertiTrack. All rights reserved.</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
